@@ -48,7 +48,7 @@ pub struct QuadTree<'a, T> {
     max_depth: uint,
     bounds: Bounds,
     elements: Vec<&'a T>,
-    children: Option<[~QuadTree<'a, T>, .. 4]>,
+    children: Option<[Box<QuadTree<'a, T>>, .. 4]>,
 }
 
 /// A bounded area represented by x, y, width, and height.
